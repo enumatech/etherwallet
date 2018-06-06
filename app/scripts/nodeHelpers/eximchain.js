@@ -1,6 +1,15 @@
 var eximchain = function() {};
 
-eximchain.getAddress = function() {};
+eximchain.generateKey = function(callback) {
+  callback({
+    error: false,
+    address: '0x9193d626a1A3668AAdeaFF4fda44A3a52A784021'
+  });
+};
+
+eximchain.getAddress = function() {
+  console.log('getAddress');
+};
 
 eximchain.getCurrentBlock = function(callback) {};
 
