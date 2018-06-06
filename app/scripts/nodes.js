@@ -41,6 +41,19 @@ nodes.customNodeObj = {
     'lib': null
 };
 nodes.nodeList = {
+    'eximchain': {
+        name: 'Eximchain',
+        'blockExplorerTX': 'https://etherscan.io/tx/[[txHash]]',
+        'blockExplorerAddr': 'https://etherscan.io/address/[[address]]',
+        'type': nodes.nodeTypes.ETH,
+        'eip155': true,
+        'chainId': 1,
+        'tokenList': [],
+        'abiList': [],
+        'service': 'localhost:3000',
+        'lib': require('./nodeHelpers/eximchain')
+    },
+
     'eth_mew': {
         'name': 'ETH',
         'blockExplorerTX': 'https://etherscan.io/tx/[[txHash]]',

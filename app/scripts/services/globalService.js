@@ -102,9 +102,17 @@ var globalService = function($http, $httpParamSerializerJQLike) {
   }
 
   var currentTab = 0
-  if(typeof chrome != 'undefined')
+  if(typeof chrome !== 'undefined') {
     currentTab = chrome.windows === undefined ? 0 : 3
+  }
+
+  var curNodeLocal = globalFuncs.localStorage.getItem('curNode', null);
+  var curNode = curNodeLocal ? JSON.parse(curNodeLocal).key : null;
+
+  console.log(curNode)
+
   return {
+    curNode: curNode,
     tabs: tabs,
     currentTab: currentTab
   }

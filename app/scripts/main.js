@@ -112,6 +112,7 @@ var footerCtrl               = require('./controllers/footerCtrl');
 var offlineTxCtrl            = require('./controllers/offlineTxCtrl');
 var walletBalanceCtrl        = require('./controllers/walletBalanceCtrl');
 var helpersCtrl              = require('./controllers/helpersCtrl');
+var eximchainGenerateKeyCtrl = require('./controllers/eximchainGenerateKeyCtrl');
 var globalService            = require('./services/globalService');
 var walletService            = require('./services/walletService');
 var blockiesDrtv             = require('./directives/blockiesDrtv');
@@ -152,6 +153,7 @@ app.constant('darkList', darkListConst);
 app.controller('tabsCtrl', ['$scope', 'globalService', '$translate', '$sce', tabsCtrl]);
 app.controller('viewCtrl', ['$scope', 'globalService', '$sce', viewCtrl]);
 app.controller('walletGenCtrl', ['$scope', walletGenCtrl]);
+app.controller('eximchainGenerateKeyCtrl', ['$scope', eximchainGenerateKeyCtrl])
 app.controller('bulkGenCtrl', ['$scope', bulkGenCtrl]);
 app.controller('onboardingCtrl', ['$scope', onboardingCtrl]);
 app.controller('decryptWalletCtrl', ['$scope', '$sce', 'walletService', decryptWalletCtrl]);
